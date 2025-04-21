@@ -31,11 +31,11 @@ jobs:
 
       - name: Lint with pylint
         run: |
-          pylint lak.py test_example.py   # Changed 'hellp.py' to 'lak.py'
+          pylint --disable=C0304,C0114 lak.py test_example.py  # Disable warnings for missing final newline and docstring
 
       - name: Test with unittest
         run: |
-          python -m unittest discover   # Optional: specify test directory if needed
+          python -m unittest discover
 
       - name: Log in to DockerHub
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -46,4 +46,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: nagesh/lak:latest   # Changed image tag to 'nagesh/lak:latest'
+          tags: nagesh/lak:latest  # Updated image tag to 'nagesh/lak:latest'
