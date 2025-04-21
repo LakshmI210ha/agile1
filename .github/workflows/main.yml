@@ -15,11 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Set up Python 3.9  # Change to 3.9 if needed
+
+      - name: Set up Python 3.9
         uses: actions/setup-python@v3
         with:
-          python-version: "3.9"  # Change this if you prefer 3.10 as in your other config
+          python-version: "3.9"  # Change to 3.10 if needed
 
       - name: Install dependencies
         run: |
