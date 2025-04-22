@@ -46,4 +46,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: nagesh/hellp:latest
+        tags: nagesh/hello.py:latest
+this is yaml file wr i wanted to do git action like wt changes i have to make
+
+
