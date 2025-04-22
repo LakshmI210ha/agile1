@@ -31,7 +31,7 @@ jobs:
 
     - name: Lint with pylint
       run: |
-        pylint hellp.py test_example.py
+        pylint agilep.py
 
     - name: Test with unittest
       run: |
@@ -46,7 +46,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: nagesh/hello.py:latest
+        tags: nagesh/agilep.py:latest
 this is yaml file wr i wanted to do git action like wt changes i have to make
 
 
